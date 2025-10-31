@@ -8,3 +8,10 @@ import { isExpired } from "./utils/date.js";
 const expired = PRODUCTS.filter(p => isExpired(p.expiryDate));
 console.log("Produits expirés :", expired);
 
+
+//etape5
+const total = PRODUCTS.reduce(
+    (somme, p) => somme + p.price * p.quantity, 0);
+console.log("Valeur totale du stock :", total, "MAD");
+
+
