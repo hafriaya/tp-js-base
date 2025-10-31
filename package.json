@@ -1,5 +1,5 @@
 {
-  "name": "tp-produits",
+  "name": "tp-js-base",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
@@ -9,7 +9,6 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",   
+  "license": "ISC",
   "description": ""
-  
 }
