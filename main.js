@@ -15,3 +15,10 @@ const total = PRODUCTS.reduce(
 console.log("Valeur totale du stock :", total, "MAD");
 
 
+
+//etape6
+const promo = PRODUCTS.filter(p => p.tags.includes("promo"));
+console.log("Produits en promo :", promo.map(p => p.name));
+const sorted = [...PRODUCTS].sort((a, b) => a.price - b.price);
+console.log("Tri par prix croissant :", sorted.map(p => p.name));
+
