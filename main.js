@@ -22,3 +22,21 @@ console.log("Produits en promo :", promo.map(p => p.name));
 const sorted = [...PRODUCTS].sort((a, b) => a.price - b.price);
 console.log("Tri par prix croissant :", sorted.map(p => p.name));
 
+
+
+//etape7
+const delay = (ms) => new Promise(res => setTimeout(res, ms));
+const addProduct = async (list, newP) => {
+    await delay(300);
+    const id = Math.max(...list.map(p => p.id)) + 1;
+    return [...list, { id, ...newP }];
+};
+const newList = await addProduct(PRODUCTS, {
+    name: "Savon",
+    category: "Hygiène",
+    price: 5,
+    quantity: 10,
+    expiryDate: "2026-01-01",
+    tags: ["hygiene"]
+});
+console.log("Après ajout :", newList.length, "produits");
